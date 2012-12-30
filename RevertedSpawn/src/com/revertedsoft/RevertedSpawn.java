@@ -13,7 +13,7 @@ import org.bukkit.plugin.java.JavaPlugin;
  * 
  * @author RevertedSoft
  * 
- * A spawn plugin that allows players do the command /spawn to return
+ * A spawn plugin that allows players to do the command /spawn to return
  * to the spawn point that can be set with /setspawn by OP's or by 
  * people with the RevertedSpawn.setspawn permission
  *
