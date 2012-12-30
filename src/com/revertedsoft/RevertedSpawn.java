@@ -93,7 +93,7 @@ public final class RevertedSpawn extends JavaPlugin{
                 World world = player.getWorld();
                 Location loc = player.getLocation();
                 world.setSpawnLocation(loc.getBlockX(), loc.getBlockY(), loc.getBlockZ());
-                player.sendMessage(ChatColor.GREEN + "You have moved the spawn to the current location.");
+                player.sendMessage(ChatColor.GREEN + "You have moved the spawn to your current location.");
             }
             
             return true;
