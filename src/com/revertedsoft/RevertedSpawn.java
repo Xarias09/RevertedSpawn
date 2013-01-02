@@ -31,10 +31,17 @@ import org.bukkit.plugin.java.JavaPlugin;
 /**
  * 
  * @author RevertedSoft
+ * @version 0.2
+ * @since 2012-12-29
+ * @see http://www.revertedsoft.com/bukkit-plugins.html for for info
  * 
  * A spawn plugin that allows players to do the command /spawn to return
- * to the spawn point that can be set with /setspawn by OP's or by 
- * people with the RevertedSpawn.setspawn permission
+ * to the spawn point that can be set with /setspawn (should only be given
+ * to staff)
+ * 
+ * Permissions:
+ * RevertedSpawn.spawn      - Allows use of /spawn command
+ * RevertedSpawn.setspawn   - Allows use of /setspawn command
  *
  */
 public final class RevertedSpawn extends JavaPlugin{
@@ -66,7 +73,7 @@ public final class RevertedSpawn extends JavaPlugin{
              * Make sure that the command was sent by a player
              */
             if(!(sender instanceof Player)) {
-                sender.sendMessage("This command can only be run by a player.");
+                sender.sendMessage(ChatColor.RED + "This command can only be run by a player.");
             } else {
                 
                 /**
@@ -83,17 +90,17 @@ public final class RevertedSpawn extends JavaPlugin{
              * Make sure the command was sent by a player
              */
             if(!(sender instanceof Player)) {
-                sender.sendMessage("This command can only be run by a player.");
+                sender.sendMessage(ChatColor.RED + "This command can only be run by a player.");
             } else {
-                
-                /**
-                 * Set the spawn to the player's current location
-                 */
                 Player player = (Player) sender;
                 World world = player.getWorld();
                 Location loc = player.getLocation();
+                
+                /**
+                 * Change the world spawn location to the current position of the player
+                 */
                 world.setSpawnLocation(loc.getBlockX(), loc.getBlockY(), loc.getBlockZ());
-                player.sendMessage(ChatColor.GREEN + "You have moved the spawn to your current location.");
+                sender.sendMessage(ChatColor.GREEN + "You have moved the spawn to your current location.");
             }
             
             return true;

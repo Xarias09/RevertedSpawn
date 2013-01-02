@@ -1,6 +1,6 @@
 name: RevertedSpawn
 main: com.revertedsoft.RevertedSpawn
-version: 0.1
+version: 0.2
 
 commands:
   spawn:
@@ -14,10 +14,10 @@ commands:
     usage: /setspawn
     
 permissions:
-  Reverted.spawn:
+  RevertedSpawn.spawn:
     description: Gives access to the /spawn command
     default: true
     
-  Reverted.setspawn:
+  RevertedSpawn.setspawn:
     description: Gives acces to the /setspawn command
     default: op
