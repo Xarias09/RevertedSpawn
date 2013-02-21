@@ -80,7 +80,13 @@ public final class RevertedSpawn extends JavaPlugin{
                  * Move the player to the spawn
                  */
                 Player player = (Player) sender;
-                player.teleport(player.getWorld().getSpawnLocation());
+                
+                /**
+                 * This is so you always go to the spawn location of the main 
+                 * main world incase you are currently in a different world.
+                 */
+                World spawn = player.getServer().getWorlds().get(0);
+                player.teleport(spawn.getSpawnLocation());
             }
             
             return true;
