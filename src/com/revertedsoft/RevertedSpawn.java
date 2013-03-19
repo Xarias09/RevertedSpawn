@@ -10,9 +10,8 @@
  * The above copyright notice and this permission notice shall be included in all 
  * copies or substantial portions of the Software.
  *
- * Neither the name RevertedSoft nor the names of its contributors may be used to 
- * endorse or promote products derived from this Software without prior written 
- * permission.
+ * Modifications, patches, updates, fixes, and any other changes in the source
+ * code MUST be made publicly available.
  *
  * THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
